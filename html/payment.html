@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickBite Payment</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="home-body">
+  <header class="app-header inner-header">
+    <div class="header-brand-area">
+      <div class="brand-pill brand-pill-solid">QuickBite</div>
+      <div>
+        <p class="location-label">Secure Checkout</p>
+        <h1 class="home-heading">Payment</h1>
+      </div>
+    </div>
+    <div class="header-actions compact-actions">
+      <div class="cart-badge-chip">Cart <span id="cartBadgeCount">0</span></div>
+      <a class="secondary-link-button" href="checkout.html">Back to checkout</a>
+    </div>
+  </header>
+
+  <main class="home-content">
+    <section class="page-hero page-hero-payment">
+      <div>
+        <p class="small-title">Secure Payment</p>
+        <h2 class="section-title">Choose payment method and place order</h2>
+        <p class="muted-text">Choose your preferred payment method and confirm your order securely.</p>
+      </div>
+      <img class="page-hero-image" src="../images/payment-hero.jpg" alt="Payment food image">
+    </section>
+
+    <section class="content-grid checkout-grid">
+      <div>
+        <section class="section-block">
+          <div class="section-header-row">
+            <div>
+              <p class="small-title">Payment Methods</p>
+              <h2 class="section-title">Complete your order</h2>
+            </div>
+          </div>
+
+          <form id="paymentForm" class="payment-form">
+            <div class="payment-option-grid">
+              <label class="payment-option-card active-option">
+                <input type="radio" name="paymentMode" value="Card" checked>
+                <span>Credit / Debit Card</span>
+              </label>
+              <label class="payment-option-card">
+                <input type="radio" name="paymentMode" value="UPI">
+                <span>UPI</span>
+              </label>
+              <label class="payment-option-card">
+                <input type="radio" name="paymentMode" value="Cash on Delivery">
+                <span>Cash on Delivery</span>
+              </label>
+            </div>
+
+            <div class="two-column-grid">
+              <div>
+                <label for="cardName">Name on Card</label>
+                <input id="cardName" type="text" placeholder="Enter card holder name" required>
+              </div>
+              <div>
+                <label for="cardNumber">Card Number</label>
+                <input id="cardNumber" type="text" placeholder="1234 5678 9012 3456" required>
+              </div>
+            </div>
+
+            <div class="two-column-grid">
+              <div>
+                <label for="expiryDate">Expiry Date</label>
+                <input id="expiryDate" type="text" placeholder="MM/YY" required>
+              </div>
+              <div>
+                <label for="cvv">CVV</label>
+                <input id="cvv" type="password" placeholder="123" required>
+              </div>
+            </div>
+
+            <button type="submit" class="primary-button">Place order</button>
+            <p id="paymentMessage" class="form-message"></p>
+          </form>
+        </section>
+      </div>
+
+      <aside class="cart-panel">
+        <div class="cart-panel-top">
+          <p class="small-title">Payment Summary</p>
+          <h2>Order total</h2>
+        </div>
+        <div id="paymentCartList" class="cart-list"></div>
+        <div class="cart-total-box">
+          <div class="cart-total-row">
+            <span>Items Total</span>
+            <strong id="paymentSubtotal">Rs. 0</strong>
+          </div>
+          <div class="cart-total-row muted-row">
+            <span>Delivery Fee</span>
+            <strong>Rs. 30</strong>
+          </div>
+          <div class="cart-total-row grand-row">
+            <span>Payable Amount</span>
+            <strong id="paymentGrandTotal">Rs. 0</strong>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="home-footer">
+    <div class="footer-grid">
+      <div>
+        <div class="brand-pill brand-pill-solid footer-brand">QuickBite</div>
+        <p class="footer-text">Fresh meals, trusted restaurants, and fast delivery across your city.</p>
+      </div>
+      <div>
+        <h3 class="footer-title">Explore</h3>
+        <p class="footer-text">Popular restaurants</p>
+        <p class="footer-text">Top categories</p>
+        <p class="footer-text">Offers and combos</p>
+      </div>
+      <div>
+        <h3 class="footer-title">Contact</h3>
+        <p class="footer-text">Lake View Road, Bangalore</p>
+        <p class="footer-text">support@quickbite.com</p>
+        <p class="footer-text">+91 98765 43210</p>
+      </div>
+    </div>
+    <div class="footer-bottom-row">
+      <p class="footer-text">2026 QuickBite. All rights reserved.</p>
+      <p class="footer-text">Fresh meals. Fast delivery. Everyday favorites.</p>
+    </div>
+  </footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/payment.js"></script>
+</body>
+</html>

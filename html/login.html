@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickBite Login</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="login-body">
+  <div class="auth-background-shape auth-shape-left"></div>
+  <div class="auth-background-shape auth-shape-right"></div>
+
+  <main class="auth-shell">
+    <section class="auth-hero-panel">
+      <div class="brand-pill">QuickBite</div>
+      <h1>Fresh food, fast delivery, all in one place.</h1>
+      <p class="hero-copy">Sign in to explore top restaurants, trending dishes, and a smooth ordering experience.</p>
+
+      <div class="auth-hero-showcase">
+        <img class="auth-illustration" src="../images/login-hero.jpg" alt="Food delivery illustration">
+      </div>
+
+      <div class="hero-feature-list">
+        <article class="hero-feature-card">
+          <h2>Fast Sign In</h2>
+          <p>Login with the account created in the registration page.</p>
+        </article>
+        <article class="hero-feature-card">
+          <h2>Offers and Menu</h2>
+          <p>Explore curated menus, special offers, and popular categories.</p>
+        </article>
+        <article class="hero-feature-card">
+          <h2>Easy Ordering</h2>
+          <p>Move from sign in to checkout with a clean, fast ordering flow.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="auth-card auth-card-compact">
+      <p class="small-title">Welcome Back</p>
+      <h2 class="auth-title">Login to continue</h2>
+      <p class="auth-subtitle">Use your registered username and password.</p>
+
+      <form id="loginForm" class="auth-form">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter password" required>
+
+        <button type="submit" class="primary-button">Login</button>
+        <p id="message" class="form-message"></p>
+      </form>
+
+      <div class="auth-footer-box">
+        <p>New user?</p>
+        <a class="text-link" href="register.html">Create account</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="home-footer">
+    <div class="footer-grid">
+      <div>
+        <div class="brand-pill brand-pill-solid footer-brand">QuickBite</div>
+        <p class="footer-text">Fresh meals, trusted restaurants, and fast delivery across your city.</p>
+      </div>
+      <div>
+        <h3 class="footer-title">Explore</h3>
+        <p class="footer-text">Login and registration</p>
+        <p class="footer-text">Food menus and offers</p>
+        <p class="footer-text">Checkout and payment flow</p>
+      </div>
+      <div>
+        <h3 class="footer-title">Contact</h3>
+        <p class="footer-text">Lake View Road, Bangalore</p>
+        <p class="footer-text">support@quickbite.com</p>
+        <p class="footer-text">+91 98765 43210</p>
+      </div>
+    </div>
+    <div class="footer-bottom-row">
+      <p class="footer-text">2026 QuickBite. All rights reserved.</p>
+      <p class="footer-text">Fresh meals. Fast delivery. Everyday favorites.</p>
+    </div>
+  </footer>
+
+  <script src="../js/login.js"></script>
+</body>
+</html>

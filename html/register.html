@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickBite Register</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="login-body">
+  <div class="auth-background-shape auth-shape-left"></div>
+  <div class="auth-background-shape auth-shape-right"></div>
+
+  <main class="auth-shell">
+    <section class="auth-hero-panel">
+      <div class="brand-pill">QuickBite</div>
+      <h1>Create your account and start ordering in minutes.</h1>
+      <p class="hero-copy">Join QuickBite to discover nearby favorites, exclusive offers, and quick doorstep delivery.</p>
+
+      <div class="auth-hero-showcase">
+        <img class="auth-illustration" src="../images/register-hero.jpg" alt="Registration illustration">
+      </div>
+
+      <div class="hero-stat-row">
+        <div class="hero-stat-card">
+          <strong>40+</strong>
+          <span>Food items</span>
+        </div>
+        <div class="hero-stat-card">
+          <strong>8</strong>
+          <span>Categories</span>
+        </div>
+        <div class="hero-stat-card">
+          <strong>20 min</strong>
+          <span>Average time</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="auth-card">
+      <p class="small-title">Join Now</p>
+      <h2 class="auth-title">Registration</h2>
+      <p class="auth-subtitle">Create your account to save preferences and place orders faster.</p>
+
+      <form id="registerForm" class="auth-form">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter your name" required>
+
+        <label for="registerUsername">Username</label>
+        <input type="text" id="registerUsername" name="registerUsername" placeholder="Choose username" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter email" required>
+
+        <label for="registerPassword">Password</label>
+        <input type="password" id="registerPassword" name="registerPassword" placeholder="Create password" required>
+
+        <button type="submit" class="primary-button">Create Account</button>
+        <p id="registerMessage" class="form-message"></p>
+      </form>
+
+      <div class="auth-footer-box">
+        <p>Already have account?</p>
+        <a class="text-link" href="login.html">Go to login</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="home-footer">
+    <div class="footer-grid">
+      <div>
+        <div class="brand-pill brand-pill-solid footer-brand">QuickBite</div>
+        <p class="footer-text">Fresh meals, trusted restaurants, and fast delivery across your city.</p>
+      </div>
+      <div>
+        <h3 class="footer-title">Explore</h3>
+        <p class="footer-text">Login and registration</p>
+        <p class="footer-text">Food menus and offers</p>
+        <p class="footer-text">Checkout and payment flow</p>
+      </div>
+      <div>
+        <h3 class="footer-title">Contact</h3>
+        <p class="footer-text">Lake View Road, Bangalore</p>
+        <p class="footer-text">support@quickbite.com</p>
+        <p class="footer-text">+91 98765 43210</p>
+      </div>
+    </div>
+    <div class="footer-bottom-row">
+      <p class="footer-text">2026 QuickBite. All rights reserved.</p>
+      <p class="footer-text">Fresh meals. Fast delivery. Everyday favorites.</p>
+    </div>
+  </footer>
+
+  <script src="../js/register.js"></script>
+</body>
+</html>

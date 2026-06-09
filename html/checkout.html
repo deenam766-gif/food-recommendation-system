@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickBite Checkout</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="home-body">
+  <header class="app-header inner-header">
+    <div class="header-brand-area">
+      <div class="brand-pill brand-pill-solid">QuickBite</div>
+      <div>
+        <p class="location-label">Delivery Address</p>
+        <h1 class="home-heading">Checkout</h1>
+      </div>
+    </div>
+    <div class="header-actions compact-actions">
+      <div class="cart-badge-chip">Cart <span id="cartBadgeCount">0</span></div>
+      <a class="secondary-link-button" href="home.html">Back to menu</a>
+    </div>
+  </header>
+
+  <main class="home-content">
+    <section class="page-hero page-hero-checkout">
+      <div>
+        <p class="small-title">Delivery Details</p>
+        <h2 class="section-title">Review address and order summary</h2>
+        <p class="muted-text">Choose a delivery address, check your selected items, and continue to payment.</p>
+      </div>
+      <img class="page-hero-image" src="../images/checkout-hero.jpg" alt="Checkout food image">
+    </section>
+
+    <section class="content-grid checkout-grid">
+      <div>
+        <section class="section-block">
+          <div class="section-header-row">
+            <div>
+              <p class="small-title">Address</p>
+              <h2 class="section-title">Delivery information</h2>
+            </div>
+          </div>
+          <form class="address-form" id="checkoutForm">
+            <div class="two-column-grid">
+              <div>
+                <label for="customerName">Full Name</label>
+                <input id="customerName" type="text" placeholder="Enter full name" required>
+              </div>
+              <div>
+                <label for="mobileNumber">Mobile Number</label>
+                <input id="mobileNumber" type="text" placeholder="Enter mobile number" required>
+              </div>
+            </div>
+            <label for="addressLine">Address</label>
+            <input id="addressLine" type="text" placeholder="House no, street, area" required>
+
+            <div class="two-column-grid">
+              <div>
+                <label for="city">City</label>
+                <input id="city" type="text" placeholder="Enter city" required>
+              </div>
+              <div>
+                <label for="pincode">Pincode</label>
+                <input id="pincode" type="text" placeholder="Enter pincode" required>
+              </div>
+            </div>
+
+            <label for="deliveryNote">Delivery Note</label>
+            <input id="deliveryNote" type="text" placeholder="Landmark or instructions">
+
+            <button type="submit" class="primary-button">Continue to payment</button>
+            <p id="checkoutMessage" class="form-message"></p>
+          </form>
+        </section>
+      </div>
+
+      <aside class="cart-panel">
+        <div class="cart-panel-top">
+          <p class="small-title">Order Summary</p>
+          <h2>Your selected items</h2>
+        </div>
+        <div id="checkoutCartList" class="cart-list"></div>
+        <div class="cart-total-box">
+          <div class="cart-total-row">
+            <span>Items Total</span>
+            <strong id="checkoutSubtotal">Rs. 0</strong>
+          </div>
+          <div class="cart-total-row muted-row">
+            <span>Delivery Fee</span>
+            <strong id="deliveryFee">Rs. 30</strong>
+          </div>
+          <div class="cart-total-row grand-row">
+            <span>Grand Total</span>
+            <strong id="checkoutGrandTotal">Rs. 0</strong>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="home-footer">
+    <div class="footer-grid">
+      <div>
+        <div class="brand-pill brand-pill-solid footer-brand">QuickBite</div>
+        <p class="footer-text">Fresh meals, trusted restaurants, and fast delivery across your city.</p>
+      </div>
+      <div>
+        <h3 class="footer-title">Explore</h3>
+        <p class="footer-text">Popular restaurants</p>
+        <p class="footer-text">Top categories</p>
+        <p class="footer-text">Offers and combos</p>
+      </div>
+      <div>
+        <h3 class="footer-title">Contact</h3>
+        <p class="footer-text">Lake View Road, Bangalore</p>
+        <p class="footer-text">support@quickbite.com</p>
+        <p class="footer-text">+91 98765 43210</p>
+      </div>
+    </div>
+    <div class="footer-bottom-row">
+      <p class="footer-text">2026 QuickBite. All rights reserved.</p>
+      <p class="footer-text">Fresh meals. Fast delivery. Everyday favorites.</p>
+    </div>
+  </footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/checkout.js"></script>
+</body>
+</html>

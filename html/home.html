@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickBite Home</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="home-body">
+  <!-- Top header with logo, search box, cart, and logout -->
+  <header class="app-header">
+    <div class="header-brand-area">
+      <div class="brand-pill brand-pill-solid">QuickBite</div>
+      <div>
+        <p class="location-label">Delivery to</p>
+        <h1 class="home-heading">Lake View Road, Bangalore</h1>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <button id="headerCartButton" type="button" class="cart-badge-chip cart-badge-button">Cart <span id="cartBadgeCount">0</span></button>
+      <div class="search-box">
+        <input id="searchInput" type="text" placeholder="Search food, category or restaurant">
+        <div id="searchSuggestions" class="search-suggestions hide"></div>
+      </div>
+      <button id="logoutButton" class="secondary-button">Logout</button>
+    </div>
+  </header>
+
+  <main class="home-content">
+    <!-- Hero banner -->
+    <section class="hero-banner">
+      <div class="hero-banner-text">
+        <p class="small-title small-title-light">Fresh Delivery</p>
+        <h2 id="welcomeText">Hello</h2>
+        <p>Discover bestselling meals, trusted restaurants, and quick delivery across your neighborhood.</p>
+        <div class="banner-meta-row">
+          <span>Free delivery over Rs. 199</span>
+          <span>Flat 40% off on first order</span>
+        </div>
+      </div>
+      <div class="hero-banner-art">
+        <img class="hero-banner-image" src="../images/home-hero.jpg" alt="Food image banner">
+      </div>
+    </section>
+
+    <!-- Food categories -->
+    <section class="section-block">
+      <div class="section-header-row">
+        <div>
+          <p class="small-title">Top Categories</p>
+          <h2 class="section-title">What's on your mind?</h2>
+        </div>
+      </div>
+      <div id="categoryList" class="category-row"></div>
+    </section>
+
+    <!-- Offer cards -->
+    <section class="section-block offers-strip">
+      <article class="offer-card offer-card-dark">
+        <p>Weekend Deal</p>
+        <h3>Up to 50% off on combos</h3>
+      </article>
+      <article class="offer-card offer-card-light">
+        <p>Express</p>
+        <h3>Meals delivered in 20 minutes</h3>
+      </article>
+      <article class="offer-card offer-card-accent">
+        <p>Chef's Pick</p>
+        <h3>Freshly prepared favorites all day</h3>
+      </article>
+    </section>
+
+    <!-- Horizontal food section -->
+    <section class="section-block food-scroll-section">
+      <div class="section-header-row section-header-stack">
+        <div>
+          <p class="small-title">Featured Picks</p>
+          <h2 class="section-title">Best sellers near you</h2>
+        </div>
+        <div class="scroll-button-row">
+          <button id="scrollPrevButton" type="button" class="mini-button scroll-nav-button" aria-label="Scroll dishes left">&#8592;</button>
+          <button id="scrollNextButton" type="button" class="mini-button scroll-nav-button" aria-label="Scroll dishes right">&#8594;</button>
+        </div>
+      </div>
+      <p class="muted-text scroll-helper-text">Swipe or use the arrows to browse popular dishes.</p>
+      <div id="horizontalFoodList" class="horizontal-food-strip"></div>
+    </section>
+
+    <!-- Main content: left side food sections, right side cart panel -->
+    <section class="content-grid">
+      <div>
+        <section class="section-block">
+          <div class="section-header-row">
+            <div>
+              <p class="small-title">Restaurants</p>
+              <h2 class="section-title">Popular places to order</h2>
+            </div>
+          </div>
+          <div id="restaurantList" class="restaurant-grid"></div>
+        </section>
+
+        <section class="section-block">
+          <div class="section-header-row section-header-stack">
+            <div>
+              <p class="small-title">Menu</p>
+              <h2 class="section-title">Popular dishes with prices</h2>
+            </div>
+            <div id="filterTabs" class="filter-tabs"></div>
+          </div>
+          <div class="menu-toolbar">
+            <p id="resultsInfo" class="muted-text"></p>
+            <div class="toolbar-actions">
+              <select id="sortSelect" class="sort-select" aria-label="Sort food items">
+                <option value="recommended">Recommended</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Top Rated</option>
+                <option value="time">Fast Delivery</option>
+              </select>
+              <button id="favoritesOnlyButton" type="button" class="secondary-button compact-button">Favorites only</button>
+              <button id="clearFiltersButton" type="button" class="secondary-button compact-button">Clear filters</button>
+            </div>
+          </div>
+          <div id="foodList" class="food-grid food-grid-large"></div>
+        </section>
+      </div>
+
+      <!-- Right side cart and selected food panel -->
+      <aside id="cartPanel" class="cart-panel">
+        <div class="cart-panel-header-row">
+          <div class="cart-panel-top">
+            <p class="small-title">Selected Dish</p>
+            <h2 id="cartDrawerTitle">Your cart</h2>
+          </div>
+          <button id="closeCartButton" type="button" class="mini-button close-cart-button" aria-label="Close cart">Close</button>
+        </div>
+        <div class="selected-food-card">
+          <div class="selected-food-media">
+            <img id="selectedFoodImage" class="selected-food-image" src="../images/home-hero.jpg" alt="Selected food preview">
+          </div>
+          <h3 id="selectedFoodName">Select a food card</h3>
+          <p id="selectedFoodRestaurant" class="muted-text"></p>
+          <p id="selectedFoodDescription" class="selected-food-description">Click any food card to preview details here.</p>
+          <div class="selected-food-meta">
+            <span id="selectedFoodPrice" class="price-tag">Rs. 0</span>
+            <button id="selectedFoodFavoriteButton" type="button" class="favorite-button">Save</button>
+          </div>
+          <div class="selected-food-actions">
+            <button id="selectedFoodDecrement" type="button" class="quantity-button">-</button>
+            <span id="selectedFoodQuantity" class="quantity-count">0</span>
+            <button id="selectedFoodIncrement" type="button" class="quantity-button">+</button>
+          </div>
+        </div>
+
+        <div class="cart-panel-top">
+          <p class="small-title">Cart Summary</p>
+          <h2>Selected items</h2>
+        </div>
+        <div id="cartList" class="cart-list"></div>
+        <div class="cart-total-box">
+          <div class="cart-total-row">
+            <span>Items Total</span>
+            <strong id="cartTotal">Rs. 0</strong>
+          </div>
+          <button id="proceedButton" class="primary-button full-width-button">Proceed to checkout</button>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <button id="cartDrawerButton" type="button" class="cart-drawer-button">View cart <span id="floatingCartCount">0</span></button>
+  <div id="cartDrawerOverlay" class="cart-drawer-overlay"></div>
+
+  <!-- Footer -->
+  <footer class="home-footer">
+    <div class="footer-grid">
+      <div>
+        <div class="brand-pill brand-pill-solid footer-brand">QuickBite</div>
+        <p class="footer-text">Fresh meals, trusted restaurants, and fast delivery across your city.</p>
+      </div>
+      <div>
+        <h3 class="footer-title">Explore</h3>
+        <p class="footer-text">Popular restaurants</p>
+        <p class="footer-text">Top categories</p>
+        <p class="footer-text">Offers and combos</p>
+      </div>
+      <div>
+        <h3 class="footer-title">Contact</h3>
+        <p class="footer-text">Lake View Road, Bangalore</p>
+        <p class="footer-text">support@quickbite.com</p>
+        <p class="footer-text">+91 98765 43210</p>
+      </div>
+    </div>
+    <div class="footer-bottom-row">
+      <p class="footer-text">2026 QuickBite. All rights reserved.</p>
+      <p class="footer-text">Fresh meals. Fast delivery. Everyday favorites.</p>
+    </div>
+  </footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/home-core.js"></script>
+  <script src="../js/home-search.js"></script>
+  <script src="../js/home-render.js"></script>
+  <script src="../js/home.js"></script>
+</body>
+</html>

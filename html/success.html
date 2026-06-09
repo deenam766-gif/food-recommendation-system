@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickBite Order Success</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="home-body">
+  <header class="app-header inner-header">
+    <div class="header-brand-area">
+      <div class="brand-pill brand-pill-solid">QuickBite</div>
+      <div>
+        <p class="location-label">Order Status</p>
+        <h1 class="home-heading">Order placed successfully</h1>
+      </div>
+    </div>
+    <div class="header-actions compact-actions">
+      <div class="cart-badge-chip">Cart <span id="cartBadgeCount">0</span></div>
+      <a class="secondary-link-button" href="home.html">Back to home</a>
+    </div>
+  </header>
+
+  <main class="home-content">
+    <section class="page-hero page-hero-payment">
+      <div>
+        <p class="small-title">Success</p>
+        <h2 class="section-title">Your order is confirmed</h2>
+        <p id="successMessage" class="muted-text">We are preparing your food and will deliver it soon.</p>
+      </div>
+      <img class="page-hero-image" src="../images/payment-hero.jpg" alt="Order success image">
+    </section>
+
+    <section class="content-grid checkout-grid">
+      <section class="section-block">
+        <div class="section-header-row">
+          <div>
+            <p class="small-title">Order Summary</p>
+            <h2 class="section-title">Placed items</h2>
+          </div>
+        </div>
+        <div id="successOrderList" class="cart-list"></div>
+      </section>
+
+      <aside class="cart-panel">
+        <div class="cart-panel-top">
+          <p class="small-title">Delivery Details</p>
+          <h2>Order snapshot</h2>
+        </div>
+        <div id="successOrderMeta" class="cart-list"></div>
+        <div class="cart-total-box">
+          <div class="cart-total-row">
+            <span>Subtotal</span>
+            <strong id="successSubtotal">Rs. 0</strong>
+          </div>
+          <div class="cart-total-row muted-row">
+            <span>Grand Total</span>
+            <strong id="successGrandTotal">Rs. 0</strong>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="home-footer">
+    <div class="footer-grid">
+      <div>
+        <div class="brand-pill brand-pill-solid footer-brand">QuickBite</div>
+        <p class="footer-text">Fresh meals, trusted restaurants, and fast delivery across your city.</p>
+      </div>
+      <div>
+        <h3 class="footer-title">Explore</h3>
+        <p class="footer-text">Popular restaurants</p>
+        <p class="footer-text">Top categories</p>
+        <p class="footer-text">Offers and combos</p>
+      </div>
+      <div>
+        <h3 class="footer-title">Contact</h3>
+        <p class="footer-text">Lake View Road, Bangalore</p>
+        <p class="footer-text">support@quickbite.com</p>
+        <p class="footer-text">+91 98765 43210</p>
+      </div>
+    </div>
+    <div class="footer-bottom-row">
+      <p class="footer-text">2026 QuickBite. All rights reserved.</p>
+      <p class="footer-text">Fresh meals. Fast delivery. Everyday favorites.</p>
+    </div>
+  </footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/success.js"></script>
+</body>
+</html>
